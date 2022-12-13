@@ -6,12 +6,12 @@ RUN apt-get update && apt-get install -y wget git npm make
 
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y ncurses-dev
-RUN  wget http://www.erlang.org/download/otp_src_20.0.tar.gz
-RUN  tar -xzvf otp_src_20.0.tar.gz
-RUN  cd otp_src_20.0/ && ./configure && make && make install
+RUN  wget http://www.erlang.org/download/otp_src_21.0.tar.gz
+RUN  tar -xzvf otp_src_21.0.tar.gz
+RUN  cd otp_src_21.0/ && ./configure && make && make install
 
-RUN rm otp_src_20.0.tar.gz
-RUN rm -R otp_src_20.0/
+RUN rm otp_src_21.0.tar.gz
+RUN rm -R otp_src_21.0/
 RUN mkdir lorawan-server
 RUN wget https://github.com/gotthardp/lorawan-server/releases/download/v0.4.12/lorawan-server-0.4.12.tar.gz
 RUN mv lorawan-server-0.4.12.tar.gz lorawan-server/
